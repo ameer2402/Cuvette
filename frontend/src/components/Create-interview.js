@@ -27,7 +27,7 @@ export default function CreateInterview() {
     };
     try {
         // Sending jobData to your Node.js backend
-        const response = await axios.post('https://cuvette-y42d.onrender.com/send-job-emails', jobData, {
+        const response = await axios.post('https://cuvette-ic2y.onrender.com/send-job-emails', jobData, {
           withCredentials: true, // Include credentials for cookie handling
         });
         console.log('Emails sent successfully:', response.data);
