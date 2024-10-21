@@ -29,7 +29,10 @@ router.post("/mail", async (req, res) => {
             employeeSize: formData.employeeSize,
         });
 
-        const token = generateToken(newUser);
+        const token =  await generateToken(newUser);
+        if(!token){
+            console.log("failed to generate token);
+        }
         console.log("Setting cookie:", token); // Debug log
 
         // Set the token as a cookie with additional security options
