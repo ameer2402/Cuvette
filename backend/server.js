@@ -30,7 +30,7 @@ app.use(express.json());
 
 
 
-mongoose.connect("mongodb://localhost:27017/Cuvette")
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log("MongoDB connected successfully");
   })
