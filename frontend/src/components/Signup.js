@@ -30,7 +30,7 @@ const generateOtp = () => Math.floor(100000 + Math.random() * 900000).toString()
     const otp = generateOtp(); // Generate OTP here
 
     try {
-      axios.post('https://cuvette-y42d.onrender.com/send-email-otp', { email:formData.companyEmail, otp})
+      axios.post('https://cuvette-ic2y.onrender.com/send-email-otp', { email:formData.companyEmail, otp})
         .then(() => {
           console.log('Email OTP generated and sent.'); // Set success message
         })
