@@ -7,6 +7,7 @@ function generateToken(user) {
         email: user.companyEmail,
         employeeName: user.EmployeeName,
     };
+    console.log(payload);
     return jwt.sign(payload, secret, { expiresIn: "1h" }); // Optionally set expiration time
 }
 
