@@ -6,7 +6,7 @@ export default function Navbar() {
   const currentPath = window.location.pathname;
 
   useEffect(() => {
-    fetch('https://cuvette-y42d.onrender.com/home', {
+    fetch('https://cuvette-ic2y.onrender.com/home', {
         method: 'GET',
         credentials: 'include',
     })
@@ -44,7 +44,7 @@ export default function Navbar() {
   };
 
   const handleLogout = () => {
-    fetch('https://cuvette-y42d.onrender.com/logout', {
+    fetch('https://cuvette-ic2y.onrender.com/logout', {
       method: 'POST',
       credentials: 'include', // Ensure cookies are sent
     })
