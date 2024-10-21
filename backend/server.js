@@ -21,7 +21,7 @@ const PORT=process.env.PORT || 5000;
 const app=express();
 
 app.use(cors({
-  origin : " https://cuvette-ic2y.onrender.com",
+  origin : "https://cuvette-frontend-amou.onrender.com",
   credentials: true,  // Allow cookies to be sent
 }));
 
