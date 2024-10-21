@@ -21,7 +21,7 @@ const PORT=process.env.PORT || 5000;
 const app=express();
 
 app.use(cors({
-  origin : " https://cuvette-frontend-d8gv.onrender.com",
+  origin : " http://localhost:3000",
   credentials: true,  // Allow cookies to be sent
 }));
 
