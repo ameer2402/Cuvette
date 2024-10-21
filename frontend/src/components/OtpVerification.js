@@ -24,7 +24,7 @@ export default function OtpVerification() {
   const verifyEmailOtp = async () => {
     const emailOtp = otpInputRef.current.value; // Get the value from the ref
     try {
-      const response = await axios.post('https://cuvette-y42d.onrender.com/verify/mail', {
+      const response = await axios.post('https://cuvette-ic2y.onrender.com/verify/mail', {
         email,
         emailOtp,
         formData,
