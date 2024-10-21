@@ -32,6 +32,7 @@ router.post("/mail", async (req, res) => {
         const token =  await generateToken(newUser);
         if(!token){
             console.log("failed to generate token");
+           throw new Error("Token generation failed");
         }
         console.log("Setting cookie:", token); // Debug log
 
