@@ -38,11 +38,12 @@ router.post("/mail", async (req, res) => {
 
         // Set the token as a cookie with additional security options
        res.cookie("token", token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production", // Only secure in production
-            sameSite: process.env.NODE_ENV === "production" ? "Strict" : "Lax", // More relaxed in dev
-            maxAge: 3600000, // 1 hour
-        });
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production", // Ensures it's only sent over HTTPS in production
+    sameSite: "None",  // Allows cross-site cookie access
+    maxAge: 3600000,   // 1 hour
+});
+
 
         await EmailOtp.deleteOne({ _id: otpRecord._id });
 
